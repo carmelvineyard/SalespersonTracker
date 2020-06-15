@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+         <meta charset="utf-8">
+	 
+         <title>Salesman Tracker</title>
+
+         <style>
+
+                body {
+
+                          background-color: darkblue;
+                          color: #dcdcdc;
+                          font-family: Georgia, 'Times New Roman', Times, serif;
+                          font-size: 24px;
+                          text-align: center;
+                 }
+
+		h2 {
+			float: left;
+		}
+
+                button {
+		  background-color: #464646;
+                  color: #ebecf0;
+                  padding: 15px 32px;
+                  font-family: Georgia, 'Times New Roman', Times, serif;
+                  font-size: 20px;
+                  text-align: center;
+                  border-radius: 12px;
+		  border-color: #585858;
+                }
+                
+                .here {
+                  background-color: #0048ba;
+		  color: #ebecf0;
+		  border-color: #005ae9;
+                }
+
+                .oneGuest {
+                  background-color: #ceb888;
+		  color: #2c2a29;
+		  border-color: #e7dcc5;
+                }
+
+		.twoGuests {
+		  background-color: #782f40;
+		  color: #ebecf0;
+		  border-color: #963b50;
+		}
+
+		.flex-container {
+  		  display: flex;
+ 		  flex-direction: column;
+		  justify-content: center;
+		}
+
+		.flex-container > div {
+  		  flex-direction: row;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+
+
+
+         </style>
+         <script>
+		
+
+               function changeColor(target) {
+		var targetId = document.getElementById(target);
+		targetId.classList.toggle("oneGuest");
+	      }
+
+	      function makeItGarnet(target) {
+		var targetId = document.getElementById(target);
+		targetId.classList.toggle("twoGuests");
+	      }
+
+		function salespersonHere(target) {
+		var targetId = document.getElementById(target);
+		targetId.classList.toggle("here");
+	      }
+	      
+              
+         </script>
+
+
+
+</head>
+
+<body>
+	
+	
+	  <div class = "flex-container" id = "button-bank">
+
+		  <h2>Salesperson Tracker</h2>
+
+		  <p>Mouse over a name to change the button blue and mark the salesperson here today.<br>
+		Click once to mark them as having one guest. Double click to mark them as having two guests.</p>
+		  <p>Click or Double click again to return the button to blue.<br>
+		Refresh the page to return all of them to the default grey.</p>
+
+		
+		
+		<div>
+			<button id = "mustard" onmouseover="salespersonHere(this.id)" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Col. Mustard</button>
+			<button id = "white" onmouseover="salespersonHere(this.id)" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Mrs. White</button>
+			<button id = "plum" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Prof. Plum</button>			
+			<button id = "green" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Mr. Green</button>
+			<button id = "peacock" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Mrs. Peacock</button>
+			<button id = "scarlet" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Miss Scarlet</button>
+			<button id = "peach" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Miss Peach</button>
+			<button id = "brunette" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">M. Brunette</button>	
+			<button id = "rose" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Mme. Rose</button>
+			<button id = "grey" onmouseover="salespersonHere(this.id)"  onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Sgt. Grey</button>
+			
+		</div>
+	    </div>
+	
+	
+  	
+</body>
+</html>
+
+
+
